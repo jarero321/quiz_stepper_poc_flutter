@@ -34,7 +34,7 @@ class StepperViewModel extends ChangeNotifier {
       question: '¿Cuánto quieres gastar en el viaje?',
       options: [
         QuizOption(
-          label: 'Lo básico, la hago con poco',
+          label: 'Lo básico, me alcanza con poco',
           value: 'low',
           scoreDelta: {'mochilero': 3, 'cultural': 1},
         ),
@@ -44,7 +44,7 @@ class StepperViewModel extends ChangeNotifier {
           scoreDelta: {'cultural': 2, 'gastronomico': 2},
         ),
         QuizOption(
-          label: 'Todo incluido, sin broncas',
+          label: 'Todo incluido, sin complicaciones',
           value: 'high',
           scoreDelta: {'resort': 3, 'gastronomico': 1},
         ),
@@ -52,15 +52,15 @@ class StepperViewModel extends ChangeNotifier {
     ),
     QuizStep(
       key: 'activity',
-      question: '¿Qué actividad te prende más?',
+      question: '¿Qué actividad prefieres?',
       options: [
         QuizOption(
-          label: 'Caminar sierra y acampar',
+          label: 'Caminar por la montaña y acampar',
           value: 'adventure',
           scoreDelta: {'mochilero': 3},
         ),
         QuizOption(
-          label: 'Echarme al sol y no moverme',
+          label: 'Tomar el sol y no moverme',
           value: 'relax',
           scoreDelta: {'resort': 3},
         ),
@@ -70,7 +70,7 @@ class StepperViewModel extends ChangeNotifier {
           scoreDelta: {'cultural': 3},
         ),
         QuizOption(
-          label: 'Probar cada platillo y cada mezcal',
+          label: 'Probar cada platillo y cada vino',
           value: 'food',
           scoreDelta: {'gastronomico': 3},
         ),
@@ -138,7 +138,7 @@ class StepperViewModel extends ChangeNotifier {
           scoreDelta: {'gastronomico': 2, 'resort': 1, 'cultural': 1},
         ),
         QuizOption(
-          label: 'Con los cuates',
+          label: 'Con amigos',
           value: 'friends',
           scoreDelta: {'mochilero': 1, 'gastronomico': 1, 'resort': 1},
         ),
@@ -159,7 +159,7 @@ class StepperViewModel extends ChangeNotifier {
           scoreDelta: {'resort': 3},
         ),
         QuizOption(
-          label: 'Sierra y bosque',
+          label: 'Montaña y bosque',
           value: 'mountain',
           scoreDelta: {'mochilero': 3},
         ),
@@ -169,7 +169,7 @@ class StepperViewModel extends ChangeNotifier {
           scoreDelta: {'cultural': 3, 'gastronomico': 1},
         ),
         QuizOption(
-          label: 'Pueblo mágico',
+          label: 'Pueblo tranquilo',
           value: 'countryside',
           scoreDelta: {'gastronomico': 2, 'cultural': 1},
         ),

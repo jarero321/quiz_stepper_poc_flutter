@@ -142,7 +142,7 @@ class _Header extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         Text(
-          'Responde unas preguntas rápidas y descubre qué perfil le late más a tu forma de viajar.',
+          'Responde unas preguntas rápidas y descubre qué perfil se ajusta mejor a tu forma de viajar.',
           style: AppTheme.paragraph(),
           textAlign: TextAlign.center,
         ),

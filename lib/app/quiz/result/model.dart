@@ -37,10 +37,10 @@ class ResultViewModel extends ChangeNotifier {
     ),
     'resort': TravelerProfile(
       key: 'resort',
-      title: 'Playero',
-      tagline: 'Ya chambeo demasiado, ahora me toca a mí.',
+      title: 'Descansador',
+      tagline: 'Ya trabajo demasiado, ahora me toca descansar.',
       description:
-          'Quieres desconectar sin broncas: alberca, tragos en el camastro, buffet abierto y nada que decidir.',
+          'Quieres desconectar sin complicaciones: piscina, bebidas frías, buffet abierto y nada que decidir.',
       icon: Icons.beach_access_rounded,
       gradientStart: Color(0xFFFF7043),
       gradientEnd: Color(0xFFE64A19),
@@ -57,10 +57,10 @@ class ResultViewModel extends ChangeNotifier {
     ),
     'gastronomico': TravelerProfile(
       key: 'gastronomico',
-      title: 'Foodie',
+      title: 'Viajero Gastronómico',
       tagline: 'Tu itinerario es un mapa de reservas.',
       description:
-          'Mercados, cantinas, tacos al pastor, mezcal y café de olla. El viaje se cuenta en sabores.',
+          'Mercados locales, restaurantes típicos, sabores nuevos y bebidas regionales. El viaje se cuenta en sabores.',
       icon: Icons.restaurant_rounded,
       gradientStart: Color(0xFFC2185B),
       gradientEnd: Color(0xFF880E4F),
