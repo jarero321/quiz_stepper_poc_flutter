@@ -11,29 +11,39 @@ class AppTheme {
   static const Color colorWhite = Color(0xFFFFFFFF);
   static const Color colorCloud = Color(0xFFE8ECEF);
 
+  static const String fontDisplay = 'Fraunces';
+  static const String fontBody = 'Inter';
+
   static TextStyle heading({Color? color}) => TextStyle(
-    fontSize: 28,
-    fontWeight: FontWeight.w700,
+    fontFamily: fontDisplay,
+    fontSize: 30,
+    fontWeight: FontWeight.w800,
+    letterSpacing: -0.8,
     color: color ?? colorSlate,
-    height: 1.2,
+    height: 1.15,
   );
 
   static TextStyle title({Color? color}) => TextStyle(
+    fontFamily: fontBody,
     fontSize: 20,
     fontWeight: FontWeight.w600,
+    letterSpacing: -0.2,
     color: color ?? colorSlate,
   );
 
   static TextStyle paragraph({Color? color, FontWeight? weight}) => TextStyle(
+    fontFamily: fontBody,
     fontSize: 16,
     fontWeight: weight ?? FontWeight.w400,
     color: color ?? colorSlateLight,
-    height: 1.4,
+    height: 1.45,
   );
 
   static TextStyle caption({Color? color}) => TextStyle(
+    fontFamily: fontBody,
     fontSize: 13,
     fontWeight: FontWeight.w500,
+    letterSpacing: 0.1,
     color: color ?? colorSlateLight,
   );
 
