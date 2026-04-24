@@ -51,7 +51,7 @@ class _IntroViewState extends State<IntroView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.COLOR_SAND,
+      backgroundColor: AppTheme.colorSand,
       body: SafeArea(
         child: ListenableBuilder(
           listenable: _viewModel,
@@ -63,10 +63,10 @@ class _IntroViewState extends State<IntroView> {
 
   Widget _body() {
     return AnimatedOpacity(
-      duration: AppTheme.DURATION_SLOW,
+      duration: AppTheme.durationSlow,
       opacity: _viewModel.isReady ? 1 : 0,
       child: AnimatedSlide(
-        duration: AppTheme.DURATION_SLOW,
+        duration: AppTheme.durationSlow,
         curve: Curves.easeOutCubic,
         offset: _viewModel.isReady ? Offset.zero : const Offset(0, 0.08),
         child: Padding(
@@ -111,14 +111,14 @@ class _Hero extends StatelessWidget {
         height: 180,
         decoration: BoxDecoration(
           gradient: const LinearGradient(
-            colors: [AppTheme.COLOR_OCEAN, AppTheme.COLOR_OCEAN_DEEP],
+            colors: [AppTheme.colorOcean, AppTheme.colorOceanDeep],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
           borderRadius: BorderRadius.circular(48),
           boxShadow: [
             BoxShadow(
-              color: AppTheme.COLOR_OCEAN.withValues(alpha: 0.35),
+              color: AppTheme.colorOcean.withValues(alpha: 0.35),
               blurRadius: 30,
               offset: const Offset(0, 14),
             ),
@@ -127,7 +127,7 @@ class _Hero extends StatelessWidget {
         child: const Icon(
           Icons.travel_explore_rounded,
           size: 88,
-          color: AppTheme.COLOR_WHITE,
+          color: AppTheme.colorWhite,
         ),
       ),
     );

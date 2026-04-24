@@ -17,7 +17,7 @@ Future<void> showAlert({
     context: context,
     barrierDismissible: false,
     builder: (ctx) => Dialog(
-      backgroundColor: AppTheme.COLOR_WHITE,
+      backgroundColor: AppTheme.colorWhite,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
         padding: const EdgeInsets.all(24),
@@ -35,9 +35,9 @@ Future<void> showAlert({
               AppButton(
                 label: cancelLabel,
                 onTap: () => Navigator.of(ctx).pop(),
-                colorFill: AppTheme.COLOR_WHITE,
-                colorBorder: AppTheme.COLOR_CLOUD,
-                colorText: AppTheme.COLOR_SLATE,
+                colorFill: AppTheme.colorWhite,
+                colorBorder: AppTheme.colorCloud,
+                colorText: AppTheme.colorSlate,
                 height: 44,
               ),
               const SizedBox(height: 10),

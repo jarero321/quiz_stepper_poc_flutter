@@ -7,7 +7,7 @@ class AppLoadingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: AppTheme.COLOR_SAND,
+      backgroundColor: AppTheme.colorSand,
       body: Center(child: _PulseDot()),
     );
   }
@@ -51,7 +51,7 @@ class _PulseDotState extends State<_PulseDot>
             width: 48,
             height: 48,
             decoration: BoxDecoration(
-              color: AppTheme.COLOR_OCEAN.withValues(
+              color: AppTheme.colorOcean.withValues(
                 alpha: 0.4 + (_controller.value * 0.6),
               ),
               shape: BoxShape.circle,

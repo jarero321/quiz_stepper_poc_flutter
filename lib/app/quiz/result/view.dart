@@ -63,7 +63,7 @@ class _ResultViewState extends State<ResultView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.COLOR_SAND,
+      backgroundColor: AppTheme.colorSand,
       body: SafeArea(
         child: ListenableBuilder(
           listenable: _viewModel,
@@ -87,10 +87,10 @@ class _ResultViewState extends State<ResultView> {
           const SizedBox(height: 8),
           Expanded(
             child: AnimatedOpacity(
-              duration: AppTheme.DURATION_SLOW,
+              duration: AppTheme.durationSlow,
               opacity: _viewModel.isRevealed ? 1 : 0,
               child: AnimatedScale(
-                duration: AppTheme.DURATION_SLOW,
+                duration: AppTheme.durationSlow,
                 curve: Curves.easeOutBack,
                 scale: _viewModel.isRevealed ? 1 : 0.85,
                 child: SingleChildScrollView(
@@ -109,9 +109,9 @@ class _ResultViewState extends State<ResultView> {
           AppButton(
             label: 'Volver a empezar',
             onTap: onRestartTap,
-            colorFill: AppTheme.COLOR_WHITE,
-            colorBorder: AppTheme.COLOR_OCEAN,
-            colorText: AppTheme.COLOR_OCEAN,
+            colorFill: AppTheme.colorWhite,
+            colorBorder: AppTheme.colorOcean,
+            colorText: AppTheme.colorOcean,
           ),
         ],
       ),
@@ -152,20 +152,20 @@ class _ProfileCard extends StatelessWidget {
             height: 88,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: AppTheme.COLOR_WHITE.withValues(alpha: 0.18),
+              color: AppTheme.colorWhite.withValues(alpha: 0.18),
             ),
-            child: Icon(profile.icon, size: 44, color: AppTheme.COLOR_WHITE),
+            child: Icon(profile.icon, size: 44, color: AppTheme.colorWhite),
           ),
           const SizedBox(height: 16),
           Text(
             profile.title,
-            style: AppTheme.heading(color: AppTheme.COLOR_WHITE),
+            style: AppTheme.heading(color: AppTheme.colorWhite),
           ),
           const SizedBox(height: 6),
           Text(
             profile.tagline,
             style: AppTheme.paragraph(
-              color: AppTheme.COLOR_WHITE.withValues(alpha: 0.9),
+              color: AppTheme.colorWhite.withValues(alpha: 0.9),
               weight: FontWeight.w500,
             ),
             textAlign: TextAlign.center,
@@ -174,7 +174,7 @@ class _ProfileCard extends StatelessWidget {
           Text(
             profile.description,
             style: AppTheme.paragraph(
-              color: AppTheme.COLOR_WHITE.withValues(alpha: 0.95),
+              color: AppTheme.colorWhite.withValues(alpha: 0.95),
             ),
             textAlign: TextAlign.center,
           ),
@@ -194,9 +194,9 @@ class _Breakdown extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: AppTheme.COLOR_WHITE,
+        color: AppTheme.colorWhite,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: AppTheme.COLOR_CLOUD),
+        border: Border.all(color: AppTheme.colorCloud),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -245,12 +245,12 @@ class _BreakdownRow extends StatelessWidget {
           borderRadius: BorderRadius.circular(4),
           child: TweenAnimationBuilder<double>(
             tween: Tween<double>(begin: 0, end: ratio),
-            duration: AppTheme.DURATION_SLOW,
+            duration: AppTheme.durationSlow,
             curve: Curves.easeOutCubic,
             builder: (_, value, _) => LinearProgressIndicator(
               value: value,
               minHeight: 6,
-              backgroundColor: AppTheme.COLOR_CLOUD,
+              backgroundColor: AppTheme.colorCloud,
               valueColor: AlwaysStoppedAnimation<Color>(color),
             ),
           ),

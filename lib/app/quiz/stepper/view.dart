@@ -80,14 +80,14 @@ class _StepperViewState extends State<StepperView> {
       child: ListenableBuilder(
         listenable: _viewModel,
         builder: (_, _) => Scaffold(
-          backgroundColor: AppTheme.COLOR_SAND,
+          backgroundColor: AppTheme.colorSand,
           appBar: AppAppBar(
             title:
                 'Pregunta ${_viewModel.currentIndex + 1} de ${_viewModel.totalSteps}',
             leading: IconButton(
               icon: const Icon(
                 Icons.arrow_back_ios_new_rounded,
-                color: AppTheme.COLOR_SLATE,
+                color: AppTheme.colorSlate,
                 size: 18,
               ),
               onPressed: onBack,
@@ -110,7 +110,7 @@ class _StepperViewState extends State<StepperView> {
   // ─── UI helpers ───
   Widget _stepBody() {
     return AnimatedSwitcher(
-      duration: AppTheme.DURATION_NORMAL,
+      duration: AppTheme.durationNormal,
       switchInCurve: Curves.easeOutCubic,
       switchOutCurve: Curves.easeInCubic,
       transitionBuilder: (child, animation) {
@@ -204,20 +204,20 @@ class _OptionCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
-        duration: AppTheme.DURATION_FAST,
+        duration: AppTheme.durationFast,
         curve: Curves.easeOutCubic,
         padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 18),
         decoration: BoxDecoration(
-          color: isSelected ? AppTheme.COLOR_OCEAN : AppTheme.COLOR_WHITE,
+          color: isSelected ? AppTheme.colorOcean : AppTheme.colorWhite,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: isSelected ? AppTheme.COLOR_OCEAN : AppTheme.COLOR_CLOUD,
+            color: isSelected ? AppTheme.colorOcean : AppTheme.colorCloud,
             width: isSelected ? 2 : 1,
           ),
           boxShadow: isSelected
               ? [
                   BoxShadow(
-                    color: AppTheme.COLOR_OCEAN.withValues(alpha: 0.25),
+                    color: AppTheme.colorOcean.withValues(alpha: 0.25),
                     blurRadius: 16,
                     offset: const Offset(0, 6),
                   ),
@@ -227,18 +227,18 @@ class _OptionCard extends StatelessWidget {
         child: Row(
           children: [
             AnimatedContainer(
-              duration: AppTheme.DURATION_FAST,
+              duration: AppTheme.durationFast,
               width: 22,
               height: 22,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: isSelected ? AppTheme.COLOR_WHITE : AppTheme.COLOR_CLOUD,
+                color: isSelected ? AppTheme.colorWhite : AppTheme.colorCloud,
               ),
               child: isSelected
                   ? const Icon(
                       Icons.check_rounded,
                       size: 16,
-                      color: AppTheme.COLOR_OCEAN,
+                      color: AppTheme.colorOcean,
                     )
                   : null,
             ),
@@ -248,8 +248,8 @@ class _OptionCard extends StatelessWidget {
                 option.label,
                 style: AppTheme.paragraph(
                   color: isSelected
-                      ? AppTheme.COLOR_WHITE
-                      : AppTheme.COLOR_SLATE,
+                      ? AppTheme.colorWhite
+                      : AppTheme.colorSlate,
                   weight: FontWeight.w500,
                 ),
               ),

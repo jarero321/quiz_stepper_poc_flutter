@@ -17,11 +17,11 @@ class QuizStepperApp extends StatelessWidget {
       navigatorKey: AppNavigator.navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: AppTheme.COLOR_SAND,
+        scaffoldBackgroundColor: AppTheme.colorSand,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: AppTheme.COLOR_OCEAN,
-          primary: AppTheme.COLOR_OCEAN,
-          surface: AppTheme.COLOR_SAND,
+          seedColor: AppTheme.colorOcean,
+          primary: AppTheme.colorOcean,
+          surface: AppTheme.colorSand,
         ),
         useMaterial3: true,
       ),

@@ -25,17 +25,17 @@ class AppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final fill = colorFill ?? AppTheme.COLOR_OCEAN;
-    final border = colorBorder ?? AppTheme.COLOR_OCEAN;
-    final text = colorText ?? AppTheme.COLOR_WHITE;
+    final fill = colorFill ?? AppTheme.colorOcean;
+    final border = colorBorder ?? AppTheme.colorOcean;
+    final text = colorText ?? AppTheme.colorWhite;
 
     return AnimatedOpacity(
-      duration: AppTheme.DURATION_FAST,
+      duration: AppTheme.durationFast,
       opacity: isEnabled ? 1.0 : 0.45,
       child: GestureDetector(
         onTap: isEnabled ? onTap : null,
         child: AnimatedContainer(
-          duration: AppTheme.DURATION_FAST,
+          duration: AppTheme.durationFast,
           height: height,
           decoration: BoxDecoration(
             color: fill,

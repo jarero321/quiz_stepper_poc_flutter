@@ -16,7 +16,7 @@ class ErrorView extends StatelessWidget {
   Widget build(BuildContext context) {
     Telemetry.trackView(tag, 'init');
     return Scaffold(
-      backgroundColor: AppTheme.COLOR_SAND,
+      backgroundColor: AppTheme.colorSand,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(24),
@@ -27,7 +27,7 @@ class ErrorView extends StatelessWidget {
               const Icon(
                 Icons.error_outline_rounded,
                 size: 72,
-                color: AppTheme.COLOR_SUNSET,
+                color: AppTheme.colorSunset,
               ),
               const SizedBox(height: 16),
               Text(

@@ -23,7 +23,7 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Column(
       children: [
         AppBar(
-          backgroundColor: AppTheme.COLOR_SAND,
+          backgroundColor: AppTheme.colorSand,
           elevation: 0,
           centerTitle: true,
           leading: leading,
@@ -33,14 +33,14 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
         if (progress != null)
           TweenAnimationBuilder<double>(
             tween: Tween<double>(begin: 0, end: progress),
-            duration: AppTheme.DURATION_NORMAL,
+            duration: AppTheme.durationNormal,
             curve: Curves.easeOutCubic,
             builder: (_, value, _) => LinearProgressIndicator(
               value: value,
               minHeight: 3,
-              backgroundColor: AppTheme.COLOR_CLOUD,
+              backgroundColor: AppTheme.colorCloud,
               valueColor: const AlwaysStoppedAnimation<Color>(
-                AppTheme.COLOR_OCEAN,
+                AppTheme.colorOcean,
               ),
             ),
           ),
