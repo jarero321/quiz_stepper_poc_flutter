@@ -1,7 +1,4 @@
 // ignore_for_file: constant_identifier_names
-//
-// SCREAMING_CASE constants mirror the AbeaTheme style of the thirdparty
-// module this POC imitates. Deliberate pattern fidelity, not a lint miss.
 
 import 'package:flutter/material.dart';
 

@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 
-/// Mock telemetry analog to ABEA's `Telemetry.trackView` / `trackError`.
 /// Routes to debugPrint in debug builds, no-op in release.
 class Telemetry {
   static void trackView(

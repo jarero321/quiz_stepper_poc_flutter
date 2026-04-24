@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Centralized navigation mirroring ABEA's ModuleNavigator.
-/// Deviation from the source: transitions are animated (300ms fade+slide)
-/// instead of Duration.zero — the POC showcases animations explicitly.
 class AppNavigator {
   static final GlobalKey<NavigatorState> navigatorKey =
       GlobalKey<NavigatorState>();

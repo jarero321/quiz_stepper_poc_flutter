@@ -1,5 +1,3 @@
-/// Session-scoped singleton mirroring ABEA's AbeaManager.
-/// Holds quiz answers + running profile scores. In-memory only.
 class QuizManager {
   // ─── Singleton ───
   static final QuizManager _instance = QuizManager._internal();
