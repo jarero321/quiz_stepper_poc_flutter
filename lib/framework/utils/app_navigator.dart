@@ -15,10 +15,9 @@ class AppNavigator {
     required Widget view,
     required BuildContext context,
   }) async {
-    await Navigator.of(context).pushAndRemoveUntil(
-      _buildRoute(view),
-      (route) => false,
-    );
+    await Navigator.of(
+      context,
+    ).pushAndRemoveUntil(_buildRoute(view), (route) => false);
   }
 
   static Future<T?> navigateAndWait<T>({

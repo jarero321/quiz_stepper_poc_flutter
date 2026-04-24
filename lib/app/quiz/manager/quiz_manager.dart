@@ -1,10 +1,8 @@
 class QuizManager {
-  // ─── Singleton ───
   static final QuizManager _instance = QuizManager._internal();
   factory QuizManager() => _instance;
   QuizManager._internal();
 
-  // ─── State ───
   final Map<String, dynamic> answers = {};
   final Map<String, int> profileScores = {
     'mochilero': 0,
@@ -13,7 +11,6 @@ class QuizManager {
     'gastronomico': 0,
   };
 
-  // ─── Methods ───
   void reset() {
     answers.clear();
     profileScores.updateAll((_, _) => 0);
@@ -30,7 +27,6 @@ class QuizManager {
     });
   }
 
-  String get winningProfile => profileScores.entries
-      .reduce((a, b) => a.value >= b.value ? a : b)
-      .key;
+  String get winningProfile =>
+      profileScores.entries.reduce((a, b) => a.value >= b.value ? a : b).key;
 }

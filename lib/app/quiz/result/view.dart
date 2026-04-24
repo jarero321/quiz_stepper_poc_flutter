@@ -15,12 +15,10 @@ class ResultView extends StatefulWidget {
 }
 
 class _ResultViewState extends State<ResultView> {
-  // ─── Constants ───
   static const String tag = 'ResultView';
 
   late final ResultViewModel _viewModel;
 
-  // ─── Lifecycle ───
   @override
   void initState() {
     super.initState();
@@ -39,7 +37,6 @@ class _ResultViewState extends State<ResultView> {
     super.dispose();
   }
 
-  // ─── Handlers ───
   void onRestartTap() {
     Telemetry.trackView(tag, 'restart_tap');
     showAlert(
@@ -59,7 +56,6 @@ class _ResultViewState extends State<ResultView> {
     );
   }
 
-  // ─── Build ───
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -118,8 +114,6 @@ class _ResultViewState extends State<ResultView> {
     );
   }
 }
-
-// ─── UI helpers ───
 
 class _ProfileCard extends StatelessWidget {
   const _ProfileCard({required this.profile});

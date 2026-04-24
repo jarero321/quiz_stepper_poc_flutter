@@ -14,12 +14,10 @@ class IntroView extends StatefulWidget {
 }
 
 class _IntroViewState extends State<IntroView> {
-  // ─── Constants ───
   static const String tag = 'IntroView';
 
   late final IntroViewModel _viewModel;
 
-  // ─── Lifecycle ───
   @override
   void initState() {
     super.initState();
@@ -34,7 +32,6 @@ class _IntroViewState extends State<IntroView> {
     super.dispose();
   }
 
-  // ─── Handlers ───
   void onStart() {
     Telemetry.trackView(
       tag,
@@ -47,7 +44,6 @@ class _IntroViewState extends State<IntroView> {
     );
   }
 
-  // ─── Build ───
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,8 +93,6 @@ class _IntroViewState extends State<IntroView> {
     );
   }
 }
-
-// ─── UI helpers ───
 
 class _Hero extends StatelessWidget {
   const _Hero();

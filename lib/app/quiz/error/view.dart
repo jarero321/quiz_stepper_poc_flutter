@@ -5,8 +5,6 @@ import 'package:quiz_stepper_poc/framework/utils/app_navigator.dart';
 import 'package:quiz_stepper_poc/framework/utils/telemetry.dart';
 import 'package:quiz_stepper_poc/framework/widgets/base/app_button.dart';
 
-/// Terminal error view — reached only for fatal/irrecoverable states.
-/// Recoverable errors must use showAlert, not this view.
 class ErrorView extends StatelessWidget {
   const ErrorView({super.key});
 

@@ -16,12 +16,10 @@ class StepperView extends StatefulWidget {
 }
 
 class _StepperViewState extends State<StepperView> {
-  // ─── Constants ───
   static const String tag = 'StepperView';
 
   late final StepperViewModel _viewModel;
 
-  // ─── Lifecycle ───
   @override
   void initState() {
     super.initState();
@@ -35,7 +33,6 @@ class _StepperViewState extends State<StepperView> {
     super.dispose();
   }
 
-  // ─── Handlers ───
   void onContinue() {
     Telemetry.trackView(
       tag,
@@ -68,7 +65,6 @@ class _StepperViewState extends State<StepperView> {
     _viewModel.goBack();
   }
 
-  // ─── Build ───
   @override
   Widget build(BuildContext context) {
     return PopScope(
@@ -107,7 +103,6 @@ class _StepperViewState extends State<StepperView> {
     );
   }
 
-  // ─── UI helpers ───
   Widget _stepBody() {
     return AnimatedSwitcher(
       duration: AppTheme.durationNormal,
@@ -247,9 +242,7 @@ class _OptionCard extends StatelessWidget {
               child: Text(
                 option.label,
                 style: AppTheme.paragraph(
-                  color: isSelected
-                      ? AppTheme.colorWhite
-                      : AppTheme.colorSlate,
+                  color: isSelected ? AppTheme.colorWhite : AppTheme.colorSlate,
                   weight: FontWeight.w500,
                 ),
               ),

@@ -22,10 +22,8 @@ class TravelerProfile {
 }
 
 class ResultViewModel extends ChangeNotifier {
-  // ─── Dependencies ───
   final QuizManager manager = QuizManager();
 
-  // ─── Catalog ───
   static const Map<String, TravelerProfile> _profiles = {
     'mochilero': TravelerProfile(
       key: 'mochilero',
@@ -69,10 +67,8 @@ class ResultViewModel extends ChangeNotifier {
     ),
   };
 
-  // ─── State ───
   bool isRevealed = false;
 
-  // ─── Getters ───
   TravelerProfile get profile =>
       _profiles[manager.winningProfile] ?? _profiles['mochilero']!;
 
@@ -86,7 +82,6 @@ class ResultViewModel extends ChangeNotifier {
 
   List<TravelerProfile> get allProfiles => _profiles.values.toList();
 
-  // ─── Methods ───
   void reveal() {
     Future.delayed(const Duration(milliseconds: 250), () {
       if (!hasListeners) return;

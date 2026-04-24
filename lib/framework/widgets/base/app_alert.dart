@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:quiz_stepper_poc/framework/theme/app_theme.dart';
 import 'package:quiz_stepper_poc/framework/widgets/base/app_button.dart';
 
-/// Recoverable-error or confirmation dialog. Use for backend rejections a
-/// user can fix, or destructive confirmations. Never use for fatal errors —
-/// route those to ErrorView.
 Future<void> showAlert({
   required BuildContext context,
   required String body,

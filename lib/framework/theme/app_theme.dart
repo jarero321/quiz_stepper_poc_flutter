@@ -1,9 +1,6 @@
-// ignore_for_file: constant_identifier_names
-
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  // ─── Colors ───
   static const Color colorOcean = Color(0xFF0097A7);
   static const Color colorOceanDeep = Color(0xFF006978);
   static const Color colorSunset = Color(0xFFFF7043);
@@ -14,34 +11,32 @@ class AppTheme {
   static const Color colorWhite = Color(0xFFFFFFFF);
   static const Color colorCloud = Color(0xFFE8ECEF);
 
-  // ─── Typography ───
   static TextStyle heading({Color? color}) => TextStyle(
-        fontSize: 28,
-        fontWeight: FontWeight.w700,
-        color: color ?? colorSlate,
-        height: 1.2,
-      );
+    fontSize: 28,
+    fontWeight: FontWeight.w700,
+    color: color ?? colorSlate,
+    height: 1.2,
+  );
 
   static TextStyle title({Color? color}) => TextStyle(
-        fontSize: 20,
-        fontWeight: FontWeight.w600,
-        color: color ?? colorSlate,
-      );
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+    color: color ?? colorSlate,
+  );
 
   static TextStyle paragraph({Color? color, FontWeight? weight}) => TextStyle(
-        fontSize: 16,
-        fontWeight: weight ?? FontWeight.w400,
-        color: color ?? colorSlateLight,
-        height: 1.4,
-      );
+    fontSize: 16,
+    fontWeight: weight ?? FontWeight.w400,
+    color: color ?? colorSlateLight,
+    height: 1.4,
+  );
 
   static TextStyle caption({Color? color}) => TextStyle(
-        fontSize: 13,
-        fontWeight: FontWeight.w500,
-        color: color ?? colorSlateLight,
-      );
+    fontSize: 13,
+    fontWeight: FontWeight.w500,
+    color: color ?? colorSlateLight,
+  );
 
-  // ─── Durations ───
   static const Duration durationFast = Duration(milliseconds: 200);
   static const Duration durationNormal = Duration(milliseconds: 350);
   static const Duration durationSlow = Duration(milliseconds: 600);

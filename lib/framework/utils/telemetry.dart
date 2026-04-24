@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 
-/// Routes to debugPrint in debug builds, no-op in release.
 class Telemetry {
   static void trackView(
     String tag,

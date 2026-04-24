@@ -26,10 +26,8 @@ class QuizStep {
 }
 
 class StepperViewModel extends ChangeNotifier {
-  // ─── Dependencies ───
   final QuizManager manager = QuizManager();
 
-  // ─── Catalog ───
   static const List<QuizStep> steps = [
     QuizStep(
       key: 'budget',
@@ -179,11 +177,9 @@ class StepperViewModel extends ChangeNotifier {
     ),
   ];
 
-  // ─── State ───
   int currentIndex = 0;
   QuizOption? selectedOption;
 
-  // ─── Getters ───
   QuizStep get currentStep => steps[currentIndex];
   int get totalSteps => steps.length;
   double get progress => (currentIndex + 1) / totalSteps;
@@ -191,13 +187,11 @@ class StepperViewModel extends ChangeNotifier {
   bool get isLast => currentIndex == steps.length - 1;
   bool get canContinue => selectedOption != null;
 
-  // ─── Methods ───
   void selectOption(QuizOption option) {
     selectedOption = option;
     notifyListeners();
   }
 
-  /// Returns true when the last step was just answered — caller navigates to result.
   bool continueNext() {
     final option = selectedOption;
     if (option == null) return false;
@@ -217,7 +211,6 @@ class StepperViewModel extends ChangeNotifier {
     if (isFirst) return;
     currentIndex--;
     selectedOption = null;
-    // Undo the prior answer's scoring so going back = clean re-answer.
     final key = currentStep.key;
     final priorValue = manager.answers[key];
     if (priorValue != null) {
