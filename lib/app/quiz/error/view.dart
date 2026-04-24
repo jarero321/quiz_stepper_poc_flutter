@@ -37,7 +37,7 @@ class ErrorView extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                'No pudimos terminar el test. Probá de nuevo.',
+                'No pudimos terminar el test. Intenta de nuevo.',
                 style: AppTheme.paragraph(),
                 textAlign: TextAlign.center,
               ),

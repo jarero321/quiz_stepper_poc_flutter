@@ -142,13 +142,13 @@ class _Header extends StatelessWidget {
     return Column(
       children: [
         Text(
-          '¿Qué tipo de viajero sos?',
+          '¿Qué tipo de viajero eres?',
           style: AppTheme.heading(),
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 12),
         Text(
-          'Respondé unas preguntas rápidas y descubrí qué perfil encaja con tu forma de viajar.',
+          'Responde unas preguntas rápidas y descubre qué perfil le late más a tu forma de viajar.',
           style: AppTheme.paragraph(),
           textAlign: TextAlign.center,
         ),

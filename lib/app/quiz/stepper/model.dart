@@ -33,10 +33,10 @@ class StepperViewModel extends ChangeNotifier {
   static const List<QuizStep> steps = [
     QuizStep(
       key: 'budget',
-      question: '¿Cuánto querés gastar en el viaje?',
+      question: '¿Cuánto quieres gastar en el viaje?',
       options: [
         QuizOption(
-          label: 'Lo justo — con poco me arreglo',
+          label: 'Lo básico, la hago con poco',
           value: 'low',
           scoreDelta: {'mochilero': 3, 'cultural': 1},
         ),
@@ -46,7 +46,7 @@ class StepperViewModel extends ChangeNotifier {
           scoreDelta: {'cultural': 2, 'gastronomico': 2},
         ),
         QuizOption(
-          label: 'Todo incluido sin pensar',
+          label: 'Todo incluido, sin broncas',
           value: 'high',
           scoreDelta: {'resort': 3, 'gastronomico': 1},
         ),
@@ -54,15 +54,15 @@ class StepperViewModel extends ChangeNotifier {
     ),
     QuizStep(
       key: 'activity',
-      question: '¿Qué actividad te moviliza más?',
+      question: '¿Qué actividad te prende más?',
       options: [
         QuizOption(
-          label: 'Caminar cerros y dormir afuera',
+          label: 'Caminar sierra y acampar',
           value: 'adventure',
           scoreDelta: {'mochilero': 3},
         ),
         QuizOption(
-          label: 'Tomar sol y no moverme',
+          label: 'Echarme al sol y no moverme',
           value: 'relax',
           scoreDelta: {'resort': 3},
         ),
@@ -72,7 +72,7 @@ class StepperViewModel extends ChangeNotifier {
           scoreDelta: {'cultural': 3},
         ),
         QuizOption(
-          label: 'Probar cada plato y cada vino',
+          label: 'Probar cada platillo y cada mezcal',
           value: 'food',
           scoreDelta: {'gastronomico': 3},
         ),
@@ -80,7 +80,7 @@ class StepperViewModel extends ChangeNotifier {
     ),
     QuizStep(
       key: 'accommodation',
-      question: '¿Dónde dormís?',
+      question: '¿Dónde duermes?',
       options: [
         QuizOption(
           label: 'Hostel compartido',
@@ -127,7 +127,7 @@ class StepperViewModel extends ChangeNotifier {
     ),
     QuizStep(
       key: 'company',
-      question: '¿Con quién viajás?',
+      question: '¿Con quién viajas?',
       options: [
         QuizOption(
           label: 'Solo/a',
@@ -140,12 +140,12 @@ class StepperViewModel extends ChangeNotifier {
           scoreDelta: {'gastronomico': 2, 'resort': 1, 'cultural': 1},
         ),
         QuizOption(
-          label: 'Con amigos',
+          label: 'Con los cuates',
           value: 'friends',
           scoreDelta: {'mochilero': 1, 'gastronomico': 1, 'resort': 1},
         ),
         QuizOption(
-          label: 'Con mi familia',
+          label: 'Con la familia',
           value: 'family',
           scoreDelta: {'resort': 3},
         ),
@@ -153,25 +153,25 @@ class StepperViewModel extends ChangeNotifier {
     ),
     QuizStep(
       key: 'climate',
-      question: '¿Dónde querés aterrizar?',
+      question: '¿A dónde quieres aterrizar?',
       options: [
         QuizOption(
-          label: 'Playa caribeña',
+          label: 'Playa en el Caribe',
           value: 'beach',
           scoreDelta: {'resort': 3},
         ),
         QuizOption(
-          label: 'Montaña y bosque',
+          label: 'Sierra y bosque',
           value: 'mountain',
           scoreDelta: {'mochilero': 3},
         ),
         QuizOption(
-          label: 'Ciudad con historia',
+          label: 'Centro histórico',
           value: 'city',
           scoreDelta: {'cultural': 3, 'gastronomico': 1},
         ),
         QuizOption(
-          label: 'Campo tranquilo',
+          label: 'Pueblo mágico',
           value: 'countryside',
           scoreDelta: {'gastronomico': 2, 'cultural': 1},
         ),

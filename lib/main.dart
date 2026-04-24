@@ -13,7 +13,7 @@ class QuizStepperApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '¿Qué tipo de viajero sos?',
+      title: '¿Qué tipo de viajero eres?',
       navigatorKey: AppNavigator.navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
