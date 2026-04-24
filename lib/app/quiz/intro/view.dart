@@ -1,0 +1,158 @@
+import 'package:flutter/material.dart';
+import 'package:quiz_stepper_poc/app/quiz/intro/model.dart';
+import 'package:quiz_stepper_poc/app/quiz/stepper/view.dart';
+import 'package:quiz_stepper_poc/framework/theme/app_theme.dart';
+import 'package:quiz_stepper_poc/framework/utils/app_navigator.dart';
+import 'package:quiz_stepper_poc/framework/utils/telemetry.dart';
+import 'package:quiz_stepper_poc/framework/widgets/base/app_button.dart';
+
+class IntroView extends StatefulWidget {
+  const IntroView({super.key});
+
+  @override
+  State<IntroView> createState() => _IntroViewState();
+}
+
+class _IntroViewState extends State<IntroView> {
+  // ─── Constants ───
+  static const String tag = 'IntroView';
+
+  late final IntroViewModel _viewModel;
+
+  // ─── Lifecycle ───
+  @override
+  void initState() {
+    super.initState();
+    _viewModel = IntroViewModel();
+    _viewModel.init();
+    Telemetry.trackView(tag, 'init');
+  }
+
+  @override
+  void dispose() {
+    _viewModel.dispose();
+    super.dispose();
+  }
+
+  // ─── Handlers ───
+  void onStart() {
+    Telemetry.trackView(
+      tag,
+      'button_tap',
+      metadata: {'button_name': 'Empezar'},
+    );
+    AppNavigator.navigateAndReplaceAll(
+      view: const StepperView(),
+      context: context,
+    );
+  }
+
+  // ─── Build ───
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppTheme.COLOR_SAND,
+      body: SafeArea(
+        child: ListenableBuilder(
+          listenable: _viewModel,
+          builder: (_, _) => _body(),
+        ),
+      ),
+    );
+  }
+
+  Widget _body() {
+    return AnimatedOpacity(
+      duration: AppTheme.DURATION_SLOW,
+      opacity: _viewModel.isReady ? 1 : 0,
+      child: AnimatedSlide(
+        duration: AppTheme.DURATION_SLOW,
+        curve: Curves.easeOutCubic,
+        offset: _viewModel.isReady ? Offset.zero : const Offset(0, 0.08),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(24, 32, 24, 24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const Spacer(),
+              const _Hero(),
+              const SizedBox(height: 32),
+              const _Header(),
+              const Spacer(),
+              AppButton(
+                label: 'Descubrir mi perfil',
+                onTap: onStart,
+                icon: Icons.arrow_forward_rounded,
+              ),
+              const SizedBox(height: 12),
+              Text(
+                '6 preguntas · toma 1 minuto',
+                style: AppTheme.caption(),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ─── UI helpers ───
+
+class _Hero extends StatelessWidget {
+  const _Hero();
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 180,
+        height: 180,
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [AppTheme.COLOR_OCEAN, AppTheme.COLOR_OCEAN_DEEP],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(48),
+          boxShadow: [
+            BoxShadow(
+              color: AppTheme.COLOR_OCEAN.withValues(alpha: 0.35),
+              blurRadius: 30,
+              offset: const Offset(0, 14),
+            ),
+          ],
+        ),
+        child: const Icon(
+          Icons.travel_explore_rounded,
+          size: 88,
+          color: AppTheme.COLOR_WHITE,
+        ),
+      ),
+    );
+  }
+}
+
+class _Header extends StatelessWidget {
+  const _Header();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          '¿Qué tipo de viajero sos?',
+          style: AppTheme.heading(),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(height: 12),
+        Text(
+          'Respondé unas preguntas rápidas y descubrí qué perfil encaja con tu forma de viajar.',
+          style: AppTheme.paragraph(),
+          textAlign: TextAlign.center,
+        ),
+      ],
+    );
+  }
+}
