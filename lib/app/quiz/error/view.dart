@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:quiz_stepper_poc/app/quiz/intro/view.dart';
 import 'package:quiz_stepper_poc/framework/theme/app_theme.dart';
 import 'package:quiz_stepper_poc/framework/utils/app_navigator.dart';
@@ -22,8 +23,8 @@ class ErrorView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const Spacer(),
-              const Icon(
-                Icons.error_outline_rounded,
+              const PhosphorIcon(
+                PhosphorIconsDuotone.warning,
                 size: 72,
                 color: AppTheme.colorSunset,
               ),

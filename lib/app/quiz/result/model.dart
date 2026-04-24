@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:quiz_stepper_poc/app/quiz/manager/quiz_manager.dart';
 
 class TravelerProfile {
@@ -31,7 +32,7 @@ class ResultViewModel extends ChangeNotifier {
       tagline: 'La ruta es el destino.',
       description:
           'Viajas ligero, buscas lo inesperado y mides el viaje en historias, no en estrellas.',
-      icon: Icons.hiking_rounded,
+      icon: PhosphorIconsDuotone.backpack,
       gradientStart: Color(0xFF2E7D32),
       gradientEnd: Color(0xFF1B5E20),
     ),
@@ -41,7 +42,7 @@ class ResultViewModel extends ChangeNotifier {
       tagline: 'Ya trabajo demasiado, ahora me toca descansar.',
       description:
           'Quieres desconectar sin complicaciones: piscina, bebidas frías, buffet abierto y nada que decidir.',
-      icon: Icons.beach_access_rounded,
+      icon: PhosphorIconsDuotone.umbrella,
       gradientStart: Color(0xFFFF7043),
       gradientEnd: Color(0xFFE64A19),
     ),
@@ -51,7 +52,7 @@ class ResultViewModel extends ChangeNotifier {
       tagline: 'Cada ciudad es una clase magistral.',
       description:
           'Museos, centros históricos, caminatas con audioguía. Regresas sabiendo más de lo que llevabas.',
-      icon: Icons.museum_rounded,
+      icon: PhosphorIconsDuotone.buildings,
       gradientStart: Color(0xFF6A1B9A),
       gradientEnd: Color(0xFF4A148C),
     ),
@@ -61,7 +62,7 @@ class ResultViewModel extends ChangeNotifier {
       tagline: 'Tu itinerario es un mapa de reservas.',
       description:
           'Mercados locales, restaurantes típicos, sabores nuevos y bebidas regionales. El viaje se cuenta en sabores.',
-      icon: Icons.restaurant_rounded,
+      icon: PhosphorIconsDuotone.forkKnife,
       gradientStart: Color(0xFFC2185B),
       gradientEnd: Color(0xFF880E4F),
     ),

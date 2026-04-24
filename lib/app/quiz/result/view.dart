@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:quiz_stepper_poc/app/quiz/intro/view.dart';
 import 'package:quiz_stepper_poc/app/quiz/result/model.dart';
 import 'package:quiz_stepper_poc/framework/theme/app_theme.dart';
@@ -148,7 +149,11 @@ class _ProfileCard extends StatelessWidget {
               shape: BoxShape.circle,
               color: AppTheme.colorWhite.withValues(alpha: 0.18),
             ),
-            child: Icon(profile.icon, size: 44, color: AppTheme.colorWhite),
+            child: PhosphorIcon(
+              profile.icon,
+              size: 44,
+              color: AppTheme.colorWhite,
+            ),
           ),
           const SizedBox(height: 16),
           Text(

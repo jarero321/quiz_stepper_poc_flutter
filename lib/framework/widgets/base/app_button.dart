@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:quiz_stepper_poc/framework/theme/app_theme.dart';
 
 class AppButton extends StatelessWidget {
@@ -55,7 +56,7 @@ class AppButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               if (icon != null) ...[
-                Icon(icon, color: text, size: 20),
+                PhosphorIcon(icon!, color: text, size: 20),
                 const SizedBox(width: 8),
               ],
               Text(label, style: AppTheme.title(color: text)),

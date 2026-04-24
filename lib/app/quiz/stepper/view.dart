@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:quiz_stepper_poc/app/quiz/intro/view.dart';
 import 'package:quiz_stepper_poc/app/quiz/result/view.dart';
 import 'package:quiz_stepper_poc/app/quiz/stepper/model.dart';
@@ -81,8 +82,8 @@ class _StepperViewState extends State<StepperView> {
             title:
                 'Pregunta ${_viewModel.currentIndex + 1} de ${_viewModel.totalSteps}',
             leading: IconButton(
-              icon: const Icon(
-                Icons.arrow_back_ios_new_rounded,
+              icon: const PhosphorIcon(
+                PhosphorIconsDuotone.caretLeft,
                 color: AppTheme.colorSlate,
                 size: 18,
               ),
@@ -135,8 +136,8 @@ class _StepperViewState extends State<StepperView> {
         isEnabled: _viewModel.canContinue,
         onTap: onContinue,
         icon: _viewModel.isLast
-            ? Icons.auto_awesome_rounded
-            : Icons.arrow_forward_rounded,
+            ? PhosphorIconsDuotone.sparkle
+            : PhosphorIconsDuotone.arrowRight,
       ),
     );
   }
@@ -230,8 +231,8 @@ class _OptionCard extends StatelessWidget {
                 color: isSelected ? AppTheme.colorWhite : AppTheme.colorCloud,
               ),
               child: isSelected
-                  ? const Icon(
-                      Icons.check_rounded,
+                  ? const PhosphorIcon(
+                      PhosphorIconsDuotone.check,
                       size: 16,
                       color: AppTheme.colorOcean,
                     )

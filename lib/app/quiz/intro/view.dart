@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:quiz_stepper_poc/app/quiz/intro/model.dart';
 import 'package:quiz_stepper_poc/app/quiz/stepper/view.dart';
 import 'package:quiz_stepper_poc/framework/theme/app_theme.dart';
@@ -78,7 +79,7 @@ class _IntroViewState extends State<IntroView> {
               AppButton(
                 label: 'Descubrir mi perfil',
                 onTap: onStart,
-                icon: Icons.arrow_forward_rounded,
+                icon: PhosphorIconsDuotone.arrowRight,
               ),
               const SizedBox(height: 12),
               Text(
@@ -118,8 +119,8 @@ class _Hero extends StatelessWidget {
             ),
           ],
         ),
-        child: const Icon(
-          Icons.travel_explore_rounded,
+        child: const PhosphorIcon(
+          PhosphorIconsDuotone.compass,
           size: 88,
           color: AppTheme.colorWhite,
         ),
